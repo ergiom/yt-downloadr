@@ -16,6 +16,9 @@ class BasicInfo:
         link: str
             link to the video
 
+        title: str
+            video title
+
         formats: dict[
                     format_id: {
                         'extension': str,
@@ -26,4 +29,5 @@ class BasicInfo:
             dictionary of available formats
     '''
     link: str
+    title: str
     formats: dict

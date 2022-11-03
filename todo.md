@@ -1,0 +1,24 @@
+- [x] info package
+    - [x] BasicInfo
+- [ ] info_extractor package
+    - [x] InfoExtractor
+    - [x] YdlInfoExtractor
+    - [ ] TestYdlInfoExtractor
+- [ ] downloader package
+    - [ ] Downloader
+    - [ ] YdlDownloader
+    - [ ] TestYdlDownloader
+- [ ] video_route
+    - [ ] VideoRoute
+    - [ ] TestVideoRoute
+- [ ] index_route
+    - [ ] IndexRoute
+    - [ ] TestIndexRoute
+
+- [ ] index.html
+- [ ] index css
+- [ ] index js
+
+- [ ] video.html
+- [ ] video css
+- [ ] video js

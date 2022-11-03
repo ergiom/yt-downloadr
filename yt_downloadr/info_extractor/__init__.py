@@ -20,6 +20,7 @@ class InfoExtractor(ABC):
     '''
     def __init__(self) -> None:
         self.__raw_info: dict = None
+        self.__link: str = None
 
     @abstractmethod
     def extract(self, link: str) -> BasicInfo:

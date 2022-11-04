@@ -1,9 +1,9 @@
 - [x] info package
     - [x] BasicInfo
-- [ ] info_extractor package
+- [x] info_extractor package
     - [x] InfoExtractor
     - [x] YdlInfoExtractor
-    - [ ] TestYdlInfoExtractor
+    - [x] TestYdlInfoExtractor
 - [ ] downloader package
     - [ ] Downloader
     - [ ] YdlDownloader

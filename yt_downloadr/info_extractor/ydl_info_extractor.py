@@ -45,13 +45,9 @@ class YdlInfoExtractor(InfoExtractor):
     def _get_raw_info(self, ydl: Ydl) -> None:
         try:
             info = ydl.extract_info(self.__link)
-        except Exception as exc:
-            raise InfoExtractorError("Failed to download video info") from exc
-
-        try:
             self.__raw_info = ydl.sanitize_info(info)
         except Exception as exc:
-            raise InfoExtractorError("Failed to sanitize info") from exc
+            raise InfoExtractorError("Failed to download video info") from exc
 
     def _extract_info(self) -> BasicInfo:
         try:
@@ -72,10 +68,13 @@ class YdlInfoExtractor(InfoExtractor):
         raw_formats = self.__raw_info['formats']
         formats = {}
         for raw_format in raw_formats:
-            format_id = raw_format['format_id']
-            extension = raw_format['ext']
-            resolution = raw_format['format_note']
-            size = raw_format['filesize']
+            try:
+                format_id = raw_format['format_id']
+                extension = raw_format['ext']
+                resolution = raw_format['format_note']
+                size = raw_format['filesize']
+            except KeyError as exc:
+                continue
             formats[format_id] = {
                 'extension': extension,
                 'resolution': resolution,

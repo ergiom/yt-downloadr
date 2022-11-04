@@ -59,7 +59,6 @@ class MockYdl:
     def sanitize_info_error(*args, **kwargs):
         raise Exception
 
-
 class Returns:
     @staticmethod
     def returned_basic_info(*args, **kwargs):

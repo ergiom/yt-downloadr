@@ -1,11 +1,11 @@
 - [x] info package
     - [x] BasicInfo
-    - [ ] add video_id to BasicInfo
+    - [x] add video_id to BasicInfo
 - [x] info_extractor package
     - [x] InfoExtractor
     - [x] YdlInfoExtractor
     - [x] TestYdlInfoExtractor
-    - [ ] add video_id to BasicInfo
+    - [x] add video_id to BasicInfo
 - [ ] downloader package
     - [x] Downloader
     - [ ] YdlDownloader

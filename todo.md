@@ -6,10 +6,10 @@
     - [x] YdlInfoExtractor
     - [x] TestYdlInfoExtractor
     - [x] add video_id to BasicInfo
-- [ ] downloader package
+- [x] downloader package
     - [x] Downloader
     - [x] YdlDownloader
-    - [ ] TestYdlDownloader
+    - [x] TestYdlDownloader
 - [ ] video_route
     - [ ] VideoRoute
     - [ ] TestVideoRoute

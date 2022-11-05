@@ -26,7 +26,7 @@ class YdlInfoExtractor(InfoExtractor):
 
     def extract(self, link: str) -> BasicInfo:
         '''Extract info received from yt_dlp.YoutubeDL'''
-        self.__link = link
+        self._link = link
         ydl = self._create_ydl()
         self._get_raw_info(ydl)
         extracted_info = self._extract_info()
@@ -44,21 +44,21 @@ class YdlInfoExtractor(InfoExtractor):
 
     def _get_raw_info(self, ydl: Ydl) -> None:
         try:
-            info = ydl.extract_info(self.__link)
-            self.__raw_info = ydl.sanitize_info(info)
+            info = ydl.extract_info(self._link)
+            self._raw_info = ydl.sanitize_info(info)
         except Exception as exc:
             raise InfoExtractorError("Failed to download video info") from exc
 
     def _extract_info(self) -> BasicInfo:
         try:
-            title = self.__raw_info['title']
+            title = self._raw_info['title']
             formats = self._configure_formats()
-            video_id = self.__raw_info['id']
+            video_id = self._raw_info['id']
         except Exception as exc:
             raise InfoExtractorError("Received info is incomplete") from exc
 
         basic_info = BasicInfo(
-            link=self.__link,
+            link=self._link,
             title=title,
             formats=formats,
             video_id=video_id
@@ -67,7 +67,7 @@ class YdlInfoExtractor(InfoExtractor):
         return basic_info
 
     def _configure_formats(self) -> dict:
-        raw_formats = self.__raw_info['formats']
+        raw_formats = self._raw_info['formats']
         formats = {}
         for raw_format in raw_formats:
             try:

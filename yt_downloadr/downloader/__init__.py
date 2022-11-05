@@ -13,7 +13,7 @@
 from abc import ABC, abstractmethod
 from pathlib import Path
 from yt_downloadr import YtDownloadrError
-from info_extractor.info import BasicInfo
+from yt_downloadr.info_extractor.info import BasicInfo
 
 
 class Downloader(ABC):
@@ -27,7 +27,7 @@ class Downloader(ABC):
 
         info: BasicInfo
             video info
-        
+
         format_id: str
             video format id
 
@@ -37,8 +37,8 @@ class Downloader(ABC):
             downloads video from provided link, in specified format and returns its path
     '''
 
-    def __init__(self, dir: str, info: BasicInfo, format_id: str) -> None:
-        self.__dir: str = dir
+    def __init__(self, directory: str, info: BasicInfo, format_id: str) -> None:
+        self.__dir: str = directory
         self.__format_id: str = format_id
         self.__info = info
         self.__path: Path = None
@@ -48,15 +48,16 @@ class Downloader(ABC):
         '''
             Downloads file from youtube link in specified format
             download -> pathlib.Path
-            
+
             Attributes
             ----------
             link: str
                 youtube video link
-            
+
             format_id: str
                 video format id
         '''
+
 
 class DownloaderError(YtDownloadrError):
     '''Core Downloader exception'''

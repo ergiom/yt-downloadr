@@ -31,28 +31,31 @@ class Downloader(ABC):
         format_id: str
             video format id
 
+        path: pathlib.Path
+            resulting path of downloaded video
+
         Methods
         -------
         download: pathlib.Path
             downloads video from provided link, in specified format and returns its path
     '''
 
-    def __init__(self, directory: str, info: BasicInfo, format_id: str) -> None:
+    def __init__(self, directory: str) -> None:
         self.__dir: str = directory
-        self.__format_id: str = format_id
-        self.__info = info
+        self.__format_id: str = None
+        self.__info: BasicInfo = None
         self.__path: Path = None
 
     @abstractmethod
-    def download(self, link: str, format_id: str) -> Path:
+    def download(self, info: BasicInfo, format_id: str) -> Path:
         '''
             Downloads file from youtube link in specified format
             download -> pathlib.Path
 
             Attributes
             ----------
-            link: str
-                youtube video link
+            info: BasicInfo
+                info about selected video
 
             format_id: str
                 video format id

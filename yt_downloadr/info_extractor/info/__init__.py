@@ -19,6 +19,9 @@ class BasicInfo:
         title: str
             video title
 
+        video_id: str
+            youtube video id
+
         formats: dict[
                     format_id: {
                         'extension': str,
@@ -31,3 +34,4 @@ class BasicInfo:
     link: str
     title: str
     formats: dict
+    video_id: str

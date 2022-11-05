@@ -47,13 +47,18 @@ class VideoRoute:
 
         return render_template('video.html', info=info)
 
-    def post(self, form: dict):
+    def post(self, format_id: str):
         '''
             Flask return for http post request
+
+            Arguments
+            ---------
+            format_id: str
+                format id of selected video
         '''
 
         info = self._get_info()
-        path = self._download(info, form)
+        path = self._download(info, format_id)
 
         return send_file(path)
 
@@ -70,9 +75,9 @@ class VideoRoute:
 
         return info
 
-    def _download(self, info, form) -> Path:
+    def _download(self, info: BasicInfo, format_id: str) -> Path:
         try:
-            path = self._downloader.download(info, form['format_id'])
+            path = self._downloader.download(info, format_id)
         except DownloaderError:
             return abort(503)
 

@@ -2,9 +2,9 @@
 
 import pytest
 import yt_dlp
-from yt_downloadr.info_extractor.info import BasicInfo
-from yt_downloadr.info_extractor import InfoExtractorError
-from yt_downloadr.info_extractor.ydl_info_extractor import YdlInfoExtractor
+from yt_downloadr.routes.info_extractor.info import BasicInfo
+from yt_downloadr.routes.info_extractor import InfoExtractorError
+from yt_downloadr.routes.info_extractor.ydl_info_extractor import YdlInfoExtractor
 
 
 class MockYdl:

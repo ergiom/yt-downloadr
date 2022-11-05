@@ -7,7 +7,7 @@
 
 from pathlib import Path
 from yt_dlp import YoutubeDL as Ydl
-from yt_downloadr.info_extractor.info import BasicInfo
+from yt_downloadr.routes.info_extractor.info import BasicInfo
 from . import Downloader, DownloaderError
 
 

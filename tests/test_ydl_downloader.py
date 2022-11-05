@@ -3,9 +3,9 @@
 import pytest
 import yt_dlp
 from pathlib import Path
-from yt_downloadr.info_extractor.info import BasicInfo
-from yt_downloadr.downloader import DownloaderError
-from yt_downloadr.downloader.ydl_downloader import YdlDownloader
+from yt_downloadr.routes.info_extractor.info import BasicInfo
+from yt_downloadr.routes.downloader import DownloaderError
+from yt_downloadr.routes.downloader.ydl_downloader import YdlDownloader
 
 
 class MockYdl:

@@ -41,10 +41,10 @@ class Downloader(ABC):
     '''
 
     def __init__(self, directory: str) -> None:
-        self.__dir: str = directory
-        self.__format_id: str = None
-        self.__info: BasicInfo = None
-        self.__path: Path = None
+        self._dir: str = directory
+        self._format_id: str = None
+        self._info: BasicInfo = None
+        self._path: Path = None
 
     @abstractmethod
     def download(self, info: BasicInfo, format_id: str) -> Path:

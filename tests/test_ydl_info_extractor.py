@@ -20,6 +20,7 @@ class MockYdl:
     def sanitize_info_correct(*args, **kwargs):
         return {
             'title': 'some title',
+            'id': 'abc123',
             'formats': [
                 {
                     'format_id': '123',
@@ -34,12 +35,14 @@ class MockYdl:
     def sanitize_info_incomplete_no_formats(*args, **kwargs):
         return {
             'title': 'some title',
+            'id': 'abc123'
         }
 
     @staticmethod
     def sanitize_info_correct_one_format_complete_one_format_incomplete(*args, **kwargs):
         return {
             'title': 'some title',
+            'id': 'abc123',
             'formats': [
                 {
                     'format_id': '123',
@@ -65,6 +68,7 @@ class Returns:
         return BasicInfo(
             link='some_link',
             title='some title',
+            video_id='abc123',
             formats={
                 '123': {
                     'extension': 'mp4',

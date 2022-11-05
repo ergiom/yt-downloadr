@@ -53,13 +53,15 @@ class YdlInfoExtractor(InfoExtractor):
         try:
             title = self.__raw_info['title']
             formats = self._configure_formats()
+            video_id = self.__raw_info['id']
         except Exception as exc:
             raise InfoExtractorError("Received info is incomplete") from exc
 
         basic_info = BasicInfo(
             link=self.__link,
             title=title,
-            formats=formats
+            formats=formats,
+            video_id=video_id
         )
 
         return basic_info

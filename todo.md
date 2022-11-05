@@ -8,7 +8,7 @@
     - [x] add video_id to BasicInfo
 - [ ] downloader package
     - [x] Downloader
-    - [ ] YdlDownloader
+    - [x] YdlDownloader
     - [ ] TestYdlDownloader
 - [ ] video_route
     - [ ] VideoRoute

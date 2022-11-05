@@ -10,9 +10,9 @@
     - [x] Downloader
     - [x] YdlDownloader
     - [x] TestYdlDownloader
-- [ ] video_route
-    - [ ] VideoRoute
-    - [ ] TestVideoRoute
+- [x] video_route
+    - [x] VideoRoute
+    - [x] TestVideoRoute
 - [ ] forms
     - [ ] VideoForm
 - [ ] index_route

@@ -13,11 +13,14 @@
 - [x] video_route
     - [x] VideoRoute
     - [x] TestVideoRoute
-- [ ] forms
-    - [ ] VideoForm
-- [ ] index_route
-    - [ ] IndexRoute
-    - [ ] TestIndexRoute
+- [x] forms
+    - [x] VideoForm
+- [x] index_route
+    - [x] IndexRoute
+    - [.] TestIndexRoute
+- [x] routing
+
+- [ ] layout.html
 
 - [ ] index.html
 - [ ] index css
@@ -26,3 +29,5 @@
 - [ ] video.html
 - [ ] video css
 - [ ] video js
+
+- [ ] logging

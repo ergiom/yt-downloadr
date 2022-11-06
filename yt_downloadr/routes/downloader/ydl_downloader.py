@@ -55,7 +55,7 @@ class YdlDownloader(Downloader):
     def _create_downloader(self) -> Ydl:
         options = dict(**YDL_OPTIONS)
         options['format'] = self._format_id
-        options['opttmpl'] = str(self._path)
+        options['outtmpl'] = str(self._path)
 
         try:
             ydl = Ydl(options)

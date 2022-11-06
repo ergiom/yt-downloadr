@@ -11,7 +11,7 @@
 '''
 
 from abc import ABC, abstractmethod
-from yt_downloadr import YtDownloadrError
+from yt_downloadr.exception import YtDownloadrError
 from .info import BasicInfo
 
 class InfoExtractor(ABC):

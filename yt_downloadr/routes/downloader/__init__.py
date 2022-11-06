@@ -12,7 +12,7 @@
 
 from abc import ABC, abstractmethod
 from pathlib import Path
-from yt_downloadr import YtDownloadrError
+from yt_downloadr.exception import YtDownloadrError
 from yt_downloadr.routes.info_extractor.info import BasicInfo
 
 

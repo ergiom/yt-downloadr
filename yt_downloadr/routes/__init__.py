@@ -9,7 +9,7 @@ from yt_downloadr.routes.downloader.ydl_downloader import YdlDownloader
 from yt_downloadr.routes.forms.video import SimpleVideoForm
 
 
-DOWNLOAD_DIR = '.'
+DOWNLOAD_DIR = '/home/ergiom/yt-downloadr/downloads'
 
 
 # routes
@@ -38,4 +38,4 @@ def video(video_id):
         return route.get()
 
     if form.validate_on_submit():
-        return route.post(form.format_id)
+        return route.post(form.format_id.data)

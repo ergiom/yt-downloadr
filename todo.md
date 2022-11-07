@@ -24,14 +24,17 @@
 
 - [x] import download dir from env
 
-- [ ] layout.html
+- [x] layout.html
+- [ ] app.js
+- [ ] app.css
 
-- [ ] index.html
-- [ ] index css
-- [ ] index js
-
+- [.] index.html
 - [ ] video.html
-- [ ] video css
-- [ ] video js
+- [ ] custom page for errors
+
+- [ ] split to video and audio formats
+
+- [ ] cutting video
+- [ ] select subtitles
 
 - [ ] logging

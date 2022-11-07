@@ -22,7 +22,7 @@ def index():
 def video(video_id):
     '''Video path of yt_downloadr'''
     download_dir = app.config['DOWNLOAD_DIR']
-    downloader = YdlDownloader()
+    downloader = YdlDownloader(app.config['DOWNLOAD_DIR'])
     info_extractor = YdlInfoExtractor()
     route = VideoRoute(
         downloader=downloader,

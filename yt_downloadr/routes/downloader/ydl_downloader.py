@@ -50,7 +50,7 @@ class YdlDownloader(Downloader):
         except Exception as exc:
             raise DownloaderError("Invalid path") from exc
 
-        self._path = path
+        self._path = path.absolute()
 
     def _create_downloader(self) -> Ydl:
         options = dict(**YDL_OPTIONS)

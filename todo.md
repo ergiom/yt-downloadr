@@ -20,7 +20,7 @@
     - [.] TestIndexRoute
 - [x] routing
 
-- [ ] fix realtive path
+- [x] fix realtive path
 
 - [ ] layout.html
 

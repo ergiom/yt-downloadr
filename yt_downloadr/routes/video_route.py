@@ -60,7 +60,9 @@ class VideoRoute:
         info = self._get_info()
         path = self._download(info, format_id)
 
-        return send_file(path)
+        resp = send_file(path)
+        resp.headers['Content-Disposition'] = 'attachment'
+        return resp
 
     def _create_link(self, video_id: str) -> str:
         link = f'http://youtube.com/watch?v={video_id}'

@@ -2,6 +2,7 @@
 
 from flask import Flask
 app = Flask(__name__)
+app.config['DOWNLOAD_DIR'] = './downloads'
 app.config.from_prefixed_env()
 app.config['WTF_CSRF_ENABLED'] = False
 

@@ -22,6 +22,8 @@
 
 - [x] fix realtive path
 
+- [x] import download dir from env
+
 - [ ] layout.html
 
 - [ ] index.html

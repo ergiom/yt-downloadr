@@ -9,9 +9,6 @@ from yt_downloadr.routes.downloader.ydl_downloader import YdlDownloader
 from yt_downloadr.routes.forms.video import SimpleVideoForm
 
 
-DOWNLOAD_DIR = '/home/ergiom/yt-downloadr/downloads'
-
-
 # routes
 @app.route('/')
 def index():
@@ -24,7 +21,8 @@ def index():
 @app.route('/video/<video_id>', methods=["GET", "POST"])
 def video(video_id):
     '''Video path of yt_downloadr'''
-    downloader = YdlDownloader(DOWNLOAD_DIR)
+    download_dir = app.config['DOWNLOAD_DIR']
+    downloader = YdlDownloader()
     info_extractor = YdlInfoExtractor()
     route = VideoRoute(
         downloader=downloader,

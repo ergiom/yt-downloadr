@@ -1,3 +1,4 @@
+# 0.0.0
 - [x] info package
     - [x] BasicInfo
     - [x] add video_id to BasicInfo
@@ -26,15 +27,28 @@
 
 - [x] layout.html
 - [ ] app.js
-- [ ] app.css
+    - [ ] table sorting
+- [x] app.css
 
-- [.] index.html
-- [ ] video.html
+- [x] index.html
+- [x] video.html
+
+- [ ] random names for videos
+- [ ] download to server only option
+- [ ] video removal
+
+- [ ] fill readme
+
+# 0.1.0
+
 - [ ] custom page for errors
 
 - [ ] split to video and audio formats
+    - [ ] select separately audio and video to merge
+    - [ ] default best selection
 
 - [ ] cutting video
+
 - [ ] select subtitles
 
 - [ ] logging

@@ -10,6 +10,7 @@ from flask import render_template, send_file, abort
 from yt_downloadr.routes.info_extractor import InfoExtractor, InfoExtractorError
 from yt_downloadr.routes.downloader import Downloader, DownloaderError
 from yt_downloadr.routes.info_extractor.info import BasicInfo
+from yt_downloadr.routes.forms.video import SimpleVideoForm
 
 
 class VideoRoute:
@@ -44,8 +45,9 @@ class VideoRoute:
         '''
 
         info = self._get_info()
+        form = SimpleVideoForm()
 
-        return render_template('video.html', info=info)
+        return render_template('video.html', info=info, form=form)
 
     def post(self, format_id: str):
         '''

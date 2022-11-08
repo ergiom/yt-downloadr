@@ -9,16 +9,32 @@
     <div>
         <div class=".container-fluid d-flex align-items-center justify-content-center">
             <form id="download-form" method="post" class="d-flex flex-column">
-                <div class="container">
+                <!-- <div class="container">
                     <input type="radio" name="format_id" value="abc" id="abc">
                     <label for="abc">abc</label>
-                </div>
-                {% for format in info.formats.keys()|sort %}
-                    <div class="container">
-                        <input type="radio" name="format_id" value="{{format}}" id="{{format}}">
-                        <label for="{{format}}">{{format}}</label>
-                    </div>
-                {% endfor %}
+                </div> -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Extension</th>
+                            <th scope="col">Resolution</th>
+                            <th scope="col">Size [MiB]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for format in info.formats.keys()|sort %}
+                        <tr>
+                            <th>
+                                <input type="radio" name="format_id" id="{{format}}" value="{{format}}" autocomplete="off">
+                            </th>
+                            <td>{{info.formats[format]['extension']}}</td>
+                            <td>{{info.formats[format]['resolution']}}</td>
+                            <td>{{'%0.2f'|format((info.formats[format]['size']|int / 1024 / 1024)|float)}}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
                 <button type="submit">download</button>
             </form>
         </div>

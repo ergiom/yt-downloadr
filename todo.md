@@ -33,6 +33,7 @@
 - [x] index.html
 - [x] video.html
 
+- [ ] fix csrf
 - [ ] random names for videos
 - [ ] download to server only option
 - [ ] video removal
@@ -46,6 +47,7 @@
 - [ ] split to video and audio formats
     - [ ] select separately audio and video to merge
     - [ ] default best selection
+    - [ ] exclude unplayable formats
 
 - [ ] cutting video
 

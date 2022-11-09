@@ -1,6 +1,6 @@
 '''yt_downloader router'''
 
-from flask import request
+from flask import request, abort
 from yt_downloadr import app
 from yt_downloadr.routes.index_route import IndexRoute
 from yt_downloadr.routes.video_route import VideoRoute
@@ -22,7 +22,7 @@ def index():
 def video(video_id):
     '''Video path of yt_downloadr'''
     download_dir = app.config['DOWNLOAD_DIR']
-    downloader = YdlDownloader(app.config['DOWNLOAD_DIR'])
+    downloader = YdlDownloader(download_dir)
     info_extractor = YdlInfoExtractor()
     route = VideoRoute(
         downloader=downloader,
@@ -37,3 +37,5 @@ def video(video_id):
 
     if form.validate_on_submit():
         return route.post(form.format_id.data)
+
+    abort(400)

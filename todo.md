@@ -33,7 +33,7 @@
 - [x] index.html
 - [x] video.html
 
-- [ ] fix csrf
+- [x] fix csrf
 - [ ] fix secret_key
 - [ ] random names for videos
 - [ ] download to server only option

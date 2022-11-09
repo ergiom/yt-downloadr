@@ -35,7 +35,7 @@
 
 - [x] fix csrf
 - [x] fix secret_key
-- [ ] random names for videos
+- [x] fix filenames for downloads
 - [ ] download to server only option
 - [ ] video removal
 

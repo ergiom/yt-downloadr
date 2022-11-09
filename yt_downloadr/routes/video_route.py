@@ -61,9 +61,10 @@ class VideoRoute:
 
         info = self._get_info()
         path = self._download(info, format_id)
+        filename = path.name
 
         resp = send_file(path)
-        resp.headers['Content-Disposition'] = 'attachment'
+        resp.headers['Content-Disposition'] = f'attachment; filename="{filename}"'
         return resp
 
     def _create_link(self, video_id: str) -> str:

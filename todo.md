@@ -34,6 +34,7 @@
 - [x] video.html
 
 - [ ] fix csrf
+- [ ] fix secret_key
 - [ ] random names for videos
 - [ ] download to server only option
 - [ ] video removal

@@ -26,8 +26,7 @@
 - [x] import download dir from env
 
 - [x] layout.html
-- [ ] app.js
-    - [ ] table sorting
+- [x] app.js
 - [x] app.css
 
 - [x] index.html
@@ -36,12 +35,16 @@
 - [x] fix csrf
 - [x] fix secret_key
 - [x] fix filenames for downloads
-- [ ] download to server only option
-- [ ] video removal
 
 - [ ] fill readme
-
 # 0.1.0
+- [ ] docker
+
+- [ ] video removal
+
+- [ ] table sorting
+
+- [ ] download to server only option
 
 - [ ] custom page for errors
 
@@ -53,5 +56,3 @@
 - [ ] cutting video
 
 - [ ] select subtitles
-
-- [ ] logging

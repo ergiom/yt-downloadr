@@ -10,3 +10,6 @@ if not app.secret_key:
     raise RuntimeError("secret key not set")
 
 import yt_downloadr.routes
+
+def create_app():
+    return app

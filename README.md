@@ -7,3 +7,13 @@ This project is mainly educational, but it might be extended in the future.
 
 - FLASK_SECRET_KEY
 - (opt) FLASK_DOWNLOAD_DIR
+
+## example setup
+Here is an example setup using waitress wsci
+
+```bash
+export FLASK_SECRET_KEY="123abc"
+export FLASK_DOWNLOAD_DIR="/tmp"
+
+waitress --call 'yt_downloadr:create_app'
+```

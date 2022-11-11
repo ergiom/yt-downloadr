@@ -1,7 +1,7 @@
 # yt-downloadr
 
 Simple flask webapp based on yt-dlp.
-This project is mainly educational, but it might be extended in the future.
+This project is mainly educational (cs50), but it might be extended in the future.
 
 ## environment
 
